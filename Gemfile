@@ -52,3 +52,5 @@ gem 'simple_form'
 # Haml in ruby on rails
 gem 'haml-rails'
 
+# Foundation::Rails is a gem to make it super easy to use Foundation in your upcoming Rails project.
+gem 'foundation-rails'

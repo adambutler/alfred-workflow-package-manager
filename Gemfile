@@ -43,3 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+# Flexible authentication solution for Rails with Warden
+gem 'devise'
+

@@ -41,6 +41,15 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # rspec-rails is a testing framework for Rails 3.x and 4.x.
+  gem 'rspec-rails', '~> 3.0'
+
+  # Guard::RSpec automatically run your specs (much like autotest)
+  gem 'guard-rspec', require: false
+
+  # factory_girl is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies
+  gem 'factory_girl_rails'
 end
 
 # Flexible authentication solution for Rails with Warden
@@ -54,3 +63,6 @@ gem 'haml-rails'
 
 # Foundation::Rails is a gem to make it super easy to use Foundation in your upcoming Rails project.
 gem 'foundation-rails'
+
+# Making it easy to serialize models for client-side use
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'

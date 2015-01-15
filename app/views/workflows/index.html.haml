@@ -1,1 +1,6 @@
 %h2 Workflows
+
+%ul
+  - @workflows.each do |workflow|
+    %li
+      = link_to workflow.title, workflow

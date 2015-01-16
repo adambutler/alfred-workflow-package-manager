@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user = User.create!({
+  email: "user@example.com",
+  password: "itsasecret"
+})
+
+workflow = Workflow.create!({
+  title: "html2haml",
+  git_repository_url: "git@github.com:adambutler/Alfred-Workflow-html2haml.git",
+  description: "Convert HTML to HAML right in your clipboard"
+})

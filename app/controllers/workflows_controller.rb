@@ -4,6 +4,10 @@ class WorkflowsController < ApplicationController
   before_action :set_workflows, only: [:index]
 
   def index
+    respond_to do |format|
+      format.html
+      format.json { render json: @workflows }
+    end
   end
 
   def new
@@ -14,7 +18,7 @@ class WorkflowsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @workflow }
-     end
+    end
   end
 
   def create

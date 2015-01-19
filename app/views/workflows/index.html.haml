@@ -1,5 +1,10 @@
 %h2 Workflows
 
+= form_tag workflows_path, method: :get do
+  %p
+    = text_field_tag :query, params[:query]
+    = submit_tag "Search", name: nil
+
 %ul
   - @workflows.each do |workflow|
     %li

@@ -43,6 +43,6 @@ class WorkflowsController < ApplicationController
   end
 
   def set_workflows
-    @workflows = Workflow.all
+    @workflows = Workflow.search(params)
   end
 end

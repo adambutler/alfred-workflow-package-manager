@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :workflows
 
-  root "static#home"
+  root "workflows#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

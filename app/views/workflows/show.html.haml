@@ -1,4 +1,5 @@
-%h2= @workflow.title
-
-%p= @workflow.description
-%pre= @workflow.git_repository_url
+.row
+  .small-12.medium-6.medium-offset-3.text--centered
+    %h3= @workflow.title
+    %p.tight= @workflow.description
+    %small.subtle= @workflow.git_repository_url

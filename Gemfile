@@ -77,3 +77,5 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers', br
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'bonsai-elasticsearch-rails'
+
+gem "autoprefixer-rails"

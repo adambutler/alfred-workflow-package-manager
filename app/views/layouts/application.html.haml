@@ -11,13 +11,26 @@
     %header.text--centered
       .row
         .column.small-12
-          %h1#logo Alfred Workflow Package Manager
-          %h2
-            = link_to "Get the package manager workflow", "#", class: "button"
+
+          %nav
+            - if current_user
+              = link_to "New workflow", new_workflow_path
+              |
+              = link_to "Sign out", destroy_user_session_path, method: :delete
+            - else
+              = link_to "Login", new_user_session_path
+              |
+              = link_to "Register", new_user_registration_path
+
+
+          = link_to root_path do
+            %h1#logo Alfred Workflow Package Manager
+          %h2 search download &amp; manage your workflows straight from Alfred.
           %br
-          %br
+          = link_to "Download the package manager workflow", "https://github.com/adambutler/alfred-workflow-package-manager-workflow/raw/master/Package%20Manager.alfredworkflow", class: "button"
 
     .row
       .column.small-12
         = yield
     = javascript_include_tag "application"
+

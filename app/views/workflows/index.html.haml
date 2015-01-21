@@ -1,11 +1,9 @@
-%h2 Workflows
+.row
+  .small-12.medium-6.medium-offset-3
+    %h3 Workflows
 
-= form_tag workflows_path, method: :get do
-  %p
-    = text_field_tag :query, params[:query]
-    = submit_tag "Search", name: nil
-
-%ul
-  - @workflows.each do |workflow|
-    %li
-      = link_to workflow.title, workflow
+    - @workflows.each do |workflow|
+      %hr
+      %h4= link_to workflow.title, workflow
+      %p.tight= workflow.description
+      %small.subtle= workflow.git_repository_url

@@ -1,17 +1,48 @@
 $purple: #9b59b6;
+$purple-dark: darken($purple, 5%);
 $white: #fff;
 $grayLight: #ecf0f1;
+$gray: darken($grayLight, 1%);
+$gray-dark: #95a5a6;
 $black: #000;
 
 $speed: 200ms;
 $ease: ease-in-out;
+$radius: 3px;
+
+$spacing: 20px;
+
+body {
+  color: #555;
+}
 
 header {
   background: $purple;
   color: $white;
+  margin-bottom: $spacing;
+  padding-bottom: 50px;
+  padding-top: $spacing;
+
+  nav {
+    text-align: right;
+    color: mix($purple, $white);
+  }
+
+  h1, h2 {
+    color: $white;
+  }
 
   h1 {
     margin-bottom: 0;
+  }
+
+  a {
+    color: mix($purple, $white);
+    border-bottom: 1px dotted mix($purple, $white);
+    &:hover {
+      color: $white;
+      border-bottom: 1px dotted $white;
+    }
   }
 }
 
@@ -21,7 +52,25 @@ h1, h2, h3 ,h4, h5, h6 {
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.2em;
+}
+
+p {
+  margin: 0;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+.subtle {
+  color: $gray-dark;
+}
+
+input[type=search] {
+  border-radius: 30px;
+  max-width: 250px;
+  margin: auto;
 }
 
 .text--centered {
@@ -29,17 +78,18 @@ h2 {
 }
 
 .button {
+  transition: all $speed $ease;
   background: $white;
   background: linear-gradient(top, $white, $grayLight);
-  background: -webkit-linear-gradient(top, $white, $grayLight);
-  color: $purple;
-  border-radius: 2px;
+  color: $purple-dark;
+  border-radius: $radius;
   font-weight: bold;
   text-shadow: 1px 1px $white;
-  box-shadow: 0 0 10px rgba($black, 0.1);
-  &:hover {
+  box-shadow: 0 0 10px rgba($black, 0.4);
+  &:hover, &:active {
     color: $purple;
     background: darken($white, 5%);
+    background: linear-gradient(top, $white, $grayLight);
   }
 }
 

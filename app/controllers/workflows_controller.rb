@@ -43,6 +43,10 @@ class WorkflowsController < ApplicationController
   end
 
   def set_workflows
-    @workflows = Workflow.search(params)
+    if params[:query].present?
+      @workflows = Workflow.search(params[:query]).records
+    else
+      @workflows = Workflow.all
+    end
   end
 end

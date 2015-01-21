@@ -73,5 +73,7 @@ gem 'foundation-rails'
 # Making it easy to serialize models for client-side use
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
 
-# A rich Ruby API and DSL for the Elasticsearch search engine
-gem 'tire'
+# Elasticsearch integrations for ActiveModel/Record and Ruby on Rails
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'

@@ -44,11 +44,11 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    ansi (1.5.0)
     arel (6.0.0)
     bcrypt (3.1.9)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bonsai-elasticsearch-rails (0.0.4)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -75,6 +75,19 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    elasticsearch (1.0.6)
+      elasticsearch-api (= 1.0.6)
+      elasticsearch-transport (= 1.0.6)
+    elasticsearch-api (1.0.6)
+      multi_json
+    elasticsearch-model (0.1.6)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.6)
+    elasticsearch-transport (1.0.6)
+      faraday
+      multi_json
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -82,6 +95,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
     formatador (0.2.5)
     foundation-rails (5.4.5.0)
@@ -105,7 +120,7 @@ GEM
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
-    hashr (0.0.22)
+    hashie (3.3.2)
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.7.0)
@@ -131,7 +146,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
-    netrc (0.10.2)
+    multipart-post (2.0.0)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -180,9 +195,6 @@ GEM
       json (~> 1.4)
     responders (2.0.2)
       railties (>= 4.2.0.alpha, < 5)
-    rest-client (1.7.2)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -233,14 +245,6 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
-    tire (0.6.2)
-      activemodel (>= 3.0)
-      activesupport
-      ansi
-      hashr (~> 0.0.19)
-      multi_json (~> 1.3)
-      rake
-      rest-client (~> 1.6)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -261,9 +265,12 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers!
+  bonsai-elasticsearch-rails
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  elasticsearch-model
+  elasticsearch-rails
   factory_girl_rails
   foundation-rails
   guard-rspec
@@ -279,7 +286,6 @@ DEPENDENCIES
   simple_form
   spring
   sqlite3
-  tire
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

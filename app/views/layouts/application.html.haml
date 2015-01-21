@@ -8,10 +8,15 @@
     = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tags
   %body
-    %header
+    %header.text--centered
       .row
         .column.small-12
           %h1#logo Alfred Workflow Package Manager
+          %h2
+            = link_to "Get the package manager workflow", "#", class: "button"
+          %br
+          %br
+
     .row
       .column.small-12
         = yield

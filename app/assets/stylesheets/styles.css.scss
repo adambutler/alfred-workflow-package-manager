@@ -1,5 +1,46 @@
+$purple: #9b59b6;
+$white: #fff;
+$grayLight: #ecf0f1;
+$black: #000;
+
+$speed: 200ms;
+$ease: ease-in-out;
+
 header {
-  background: #9b59b6;
+  background: $purple;
+  color: $white;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3 ,h4, h5, h6 {
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+.text--centered {
+  text-align: center;
+}
+
+.button {
+  background: $white;
+  background: linear-gradient(top, $white, $grayLight);
+  background: -webkit-linear-gradient(top, $white, $grayLight);
+  color: $purple;
+  border-radius: 2px;
+  font-weight: bold;
+  text-shadow: 1px 1px $white;
+  box-shadow: 0 0 10px rgba($black, 0.1);
+  &:hover {
+    color: $purple;
+    background: darken($white, 5%);
+  }
 }
 
 #logo {
@@ -11,5 +52,5 @@ header {
   width: 654px;
   height: 134px;
   background-size: 100%;
-  margin: 60px auto;
+  margin: 60px auto 20px auto;
 }

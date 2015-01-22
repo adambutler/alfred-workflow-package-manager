@@ -32,5 +32,16 @@
     .row
       .column.small-12
         = yield
+        %br
+        .row.text--centered.subtle
+          .small-12.medium-6.medium-offset-3
+            %hr
+            %p
+              %small
+                Alfred Workflow Package Manager is an
+                = link_to "Open Source Project", "http://github.com/adambutler/alfred-workflow-package-manager"
+                by
+                = link_to "Adam Butler", "http://lab.io"
+        %br
     = javascript_include_tag "application"
 

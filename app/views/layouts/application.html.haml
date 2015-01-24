@@ -28,7 +28,7 @@
   %body
     %header.text--centered
       .row
-        .column.small-12
+        .columns.small-12
 
           %nav
             - if current_user
@@ -41,18 +41,18 @@
               = link_to "Register", new_user_registration_path
 
 
-          = link_to root_path do
+          = link_to root_path, id: "logo-outer" do
             %h1#logo Alfred Workflow Package Manager
           %h2 search download &amp; manage your workflows straight from Alfred.
           %br
           = link_to "Download the package manager workflow", "https://github.com/adambutler/alfred-workflow-package-manager-workflow/raw/master/Package%20Manager.alfredworkflow", class: "button"
 
     .row
-      .column.small-12
+      .columns.small-12
         = yield
         %br
         .row.text--centered.subtle
-          .small-12.medium-6.medium-offset-3
+          .columns.small-12.medium-6.medium-offset-3
             %hr
             %p
               %small

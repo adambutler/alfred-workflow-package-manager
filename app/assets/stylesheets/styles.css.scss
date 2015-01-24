@@ -26,6 +26,15 @@ header {
   nav {
     text-align: right;
     color: mix($purple, $white);
+
+    a {
+      color: mix($purple, $white);
+      border-bottom: 1px dotted mix($purple, $white);
+      &:hover {
+        color: $white;
+        border-bottom: 1px dotted $white;
+      }
+    }
   }
 
   h1, h2 {
@@ -34,15 +43,6 @@ header {
 
   h1 {
     margin-bottom: 0;
-  }
-
-  a {
-    color: mix($purple, $white);
-    border-bottom: 1px dotted mix($purple, $white);
-    &:hover {
-      color: $white;
-      border-bottom: 1px dotted $white;
-    }
   }
 }
 
@@ -93,14 +93,21 @@ input[type=search] {
   }
 }
 
+#logo-outer {
+  display: block;
+  max-width: 654px;
+  margin: auto;
+}
+
 #logo {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
   background: asset-url("logo.png");
-  width: 654px;
-  height: 134px;
+  // max-width: 654px;
+  // max-height: 134px;
+  padding-bottom: 100% * (134/654);
   background-size: 100%;
   margin: 60px auto 20px auto;
 }

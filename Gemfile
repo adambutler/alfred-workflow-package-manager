@@ -79,3 +79,4 @@ gem 'elasticsearch-rails'
 gem 'bonsai-elasticsearch-rails'
 
 gem "autoprefixer-rails"
+gem 'friendly_id', '~> 5.1.0'

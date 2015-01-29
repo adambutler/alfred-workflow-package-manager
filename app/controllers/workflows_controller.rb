@@ -39,7 +39,7 @@ class WorkflowsController < ApplicationController
   end
 
   def set_workflow
-    @workflow = Workflow.find(params[:id])
+    @workflow = Workflow.friendly.find(params[:id])
   end
 
   def set_workflows

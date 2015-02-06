@@ -3,3 +3,13 @@
     %h3= @workflow.title
     %p.tight= @workflow.description
     %small.subtle= @workflow.git_repository_url
+
+    %br
+    %br
+
+    .panel
+      %h5 To install from Alfred run
+      %br
+      %h1
+        %pre
+          flow #{@workflow.title}
